@@ -76,7 +76,8 @@ def assess_by_id(body):  # noqa: E501
         results.append(community_standards_result)
         results.append(fileformat_result)
 
-        timestmp = datetime.datetime.now().replace(microsecond=0).isoformat()
+        #timestmp = datetime.datetime.now().replace(microsecond=0).isoformat()
+        timestmp = datetime.datetime.now().replace(microsecond=0).isoformat() + "Z" # generate RFC 3339 timestamp as specified in openapi3
         metric_spec = Preprocessor.metric_specification
         totalmetrics = len(results)
         final_response = FAIRResults(timestamp= timestmp, metric_specification=metric_spec, total_metrics=totalmetrics, results=results)

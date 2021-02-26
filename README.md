@@ -40,9 +40,11 @@ Your Swagger definition lives here:
 ```
 http://localhost:1071/uji/api/v1/swagger.json
 ```
-Note:
+Notes:
+
 To avoid tika startup warning message, set environment variable TIKA_LOG_PATH. For more information, see [https://github.com/chrismattmann/tika-python](https://github.com/chrismattmann/tika-python)
 
+If you receive the exception 'urllib2.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED]', run the install command shipped with Python : ./Install\ Certificates.command
 
 ## License
 This project is licensed under the MIT License; for more details, see the [LICENSE](https://github.com/pangaea-data-publisher/fuji/blob/master/LICENSE) file.
